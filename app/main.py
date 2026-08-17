@@ -125,3 +125,7 @@ async def stats():
 @app.get("/health")
 async def health():
     return {"ok": True}
+
+@app.get("/")
+async def root():
+    return RedirectResponse(url="/docs")
